@@ -1,5 +1,5 @@
 #!/bin/bash
-_nameOfContainer=$(docker ps | grep hello-python | awk '{print $14}')
+_nameOfContainer=$(docker ps | grep hello-python)
 
 echo "Deploy is starting..."
 echo "Pulling from Docker Hub..."
@@ -26,5 +26,5 @@ fi
 if [[ $? -eq 0 ]]; then
   echo Done
 else
-  echo "Something went wrong!!"
+  echo "Something went wrong!!!"
 fi
